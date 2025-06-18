@@ -47,7 +47,7 @@ public class ItemPageController implements Initializable {
         colQuantity.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         colBuyPrice.setCellValueFactory(new PropertyValueFactory<>("buyPrice"));
         colSellPrice.setCellValueFactory(new PropertyValueFactory<>("sellPrice"));
-        colTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
+        colTotal.setCellValueFactory(new PropertyValueFactory<>("qtyTotal"));
 
         try {
             resetPage();
@@ -64,7 +64,8 @@ public class ItemPageController implements Initializable {
                         itemDto.getItemName(),
                         itemDto.getQuantity(),
                         itemDto.getBuyPrice(),
-                        itemDto.getSellPrice()
+                        itemDto.getSellPrice(),
+                        itemDto.getQuantity() * itemDto.getBuyPrice()
                 )).toList()
         ));
     }
@@ -108,7 +109,8 @@ public class ItemPageController implements Initializable {
                 itemName,
                 quantity,
                 buyPrice,
-                sellPrice
+                sellPrice,
+                total
         );
         
         try {
@@ -138,7 +140,8 @@ public class ItemPageController implements Initializable {
                 itemName,
                 Integer.parseInt(quantity),
                 Double.parseDouble(buyingPrice),
-                Double.parseDouble(sellingPrice)
+                Double.parseDouble(sellingPrice),
+                Double.parseDouble(total.substring(0, total.indexOf(".") + 2))
         );
 
         try {
@@ -211,7 +214,8 @@ public class ItemPageController implements Initializable {
                                 itemDto.getItemName(),
                                 itemDto.getQuantity(),
                                 itemDto.getBuyPrice(),
-                                itemDto.getSellPrice()
+                                itemDto.getSellPrice(),
+                                itemDto.getQuantity() * itemDto.getBuyPrice()
                         )).toList()
                 ));
             }

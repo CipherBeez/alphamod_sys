@@ -32,4 +32,8 @@ public class DashboardPageController {
     public void btnGoToSupplierPageOnAction(ActionEvent event) {
         navigateTo("/view/SupplierPage.fxml");
     }
+
+    public void btnVisitOrderPage(ActionEvent actionEvent) {
+        navigateTo("/view/OrderPage.fxml");
+    }
 }

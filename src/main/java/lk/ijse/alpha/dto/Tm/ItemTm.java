@@ -14,4 +14,5 @@ public class ItemTm {
     private int quantity;
     private double buyPrice;
     private double sellPrice;
+    private double qtyTotal;
 }

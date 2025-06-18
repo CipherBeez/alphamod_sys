@@ -9,24 +9,26 @@ import java.util.ArrayList;
 
 public class ItemModel {
 
-        public boolean saveItem(ItemDto itemDto) throws ClassNotFoundException, SQLException {
+        public boolean saveItem(ItemDto itemDto) throws SQLException {
             return CrudUtil.execute(
-                    "INSERT INTO Item VALUES(?,?,?,?,?)",
+                    "INSERT INTO Item VALUES(?,?,?,?,?,?)",
                     itemDto.getItemId(),
                     itemDto.getItemName(),
                     itemDto.getQuantity(),
                     itemDto.getBuyPrice(),
-                    itemDto.getSellPrice()
+                    itemDto.getSellPrice(),
+                    itemDto.getQuantity() * itemDto.getBuyPrice()
             );
         }
 
-        public boolean updateItem(ItemDto itemDto) throws SQLException, ClassNotFoundException {
+        public boolean updateItem(ItemDto itemDto) throws SQLException {
             return CrudUtil.execute(
-                    "UPDATE Item SET item_name = ? , quantity = ? , buying_price = ? , selling_price = ? WHERE item_id = ?",
+                    "UPDATE Item SET item_name = ? , quantity = ? , buying_price = ? , selling_price = ?, total = ? WHERE item_id = ?",
                     itemDto.getItemName(),
                     itemDto.getQuantity(),
                     itemDto.getBuyPrice(),
                     itemDto.getSellPrice(),
+                    itemDto.getQuantity() * itemDto.getBuyPrice(),
                     itemDto.getItemId()
             );
         }
@@ -45,7 +47,8 @@ public class ItemModel {
                         resultSet.getString(2),
                         resultSet.getInt(3),
                         resultSet.getDouble(4),
-                        resultSet.getDouble(5)
+                        resultSet.getDouble(5),
+                        resultSet.getDouble(6)
                 );
                 itemDtoArrayList.add(itemDto);
             }
@@ -95,7 +98,8 @@ public class ItemModel {
                         resultSet.getString(2),
                         resultSet.getInt(3),
                         resultSet.getDouble(4),
-                        resultSet.getDouble(5)
+                        resultSet.getDouble(5),
+                        resultSet.getDouble(6)
                 );
                 dtos.add(itemDto);
             }
@@ -127,7 +131,8 @@ public class ItemModel {
                         resultSet.getString(2),
                         resultSet.getInt(3),
                         resultSet.getDouble(4),
-                        resultSet.getDouble(5)
+                        resultSet.getDouble(5),
+                        resultSet.getDouble(6)
                 );
             }
             return null;

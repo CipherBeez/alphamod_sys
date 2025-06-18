@@ -9,6 +9,7 @@ CREATE TABLE Item (
                       quantity INT NOT NULL,
                       buying_price DECIMAL(10,2) NOT NULL,
                       selling_price DECIMAL(10,2) NOT NULL,
+                      total DECIMAL(10,2) NOT NULL,
                       PRIMARY KEY (item_id)
 );
 
@@ -66,16 +67,15 @@ CREATE TABLE sup_order_details (
 
 
 -- Dummy Data
-
 -- Insert dummy suppliers
 INSERT INTO Supplier (supplier_id, supplier_name, supplier_contact, supplier_address) VALUES
                                                                                           ('S001', 'ABC Traders', '0771234567', 'Colombo 01'),
                                                                                           ('S002', 'Global Supplies', '0779876543', 'Kandy'),
                                                                                           ('S003', 'Quick Mart', '0714567890', 'Galle');
 
--- Insert dummy items
-INSERT INTO Item (item_id, item_name, quantity, buying_price, selling_price) VALUES
-                                                                                 ('I001', 'Pen', 100, 20.00, 35.00),
-                                                                                 ('I002', 'Notebook', 200, 50.00, 80.00),
-                                                                                 ('I003', 'Pencil', 150, 10.00, 20.00),
-                                                                                 ('I004', 'Eraser', 300, 5.00, 10.00);
+-- Insert dummy items (with total = quantity * buying_price)
+INSERT INTO Item (item_id, item_name, quantity, buying_price, selling_price, total) VALUES
+                                                                                        ('I001', 'Pen', 100, 20.00, 35.00, 2000.00),
+                                                                                        ('I002', 'Notebook', 200, 50.00, 80.00, 10000.00),
+                                                                                        ('I003', 'Pencil', 150, 10.00, 20.00, 1500.00),
+                                                                                        ('I004', 'Eraser', 300, 5.00, 10.00, 1500.00);

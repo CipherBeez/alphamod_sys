@@ -205,7 +205,7 @@
                                 <TableColumn fx:id="colQuantity" prefWidth="75.0" text="Quantity" />
                                 <TableColumn fx:id="colBuyPrice" prefWidth="75.0" text="Buying Price" />
                                 <TableColumn fx:id="colSellPrice" prefWidth="75.0" text="Selling Price" />
-                        <TableColumn fx:id="colTotal" prefWidth="75.0" text="BuyingTotal" />
+                        <TableColumn fx:id="colTotal" prefWidth="75.0" text="Quantity Total" />
                             </columns>
                             <VBox.margin>
                                 <Insets left="20.0" right="20.0" top="20.0" />
