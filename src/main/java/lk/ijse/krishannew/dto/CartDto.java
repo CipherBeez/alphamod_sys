@@ -1,0 +1,13 @@
+package lk.ijse.krishannew.dto;
+
+import javafx.scene.control.Button;
+
+public class CartDto {
+    private String orderId;
+    private String itemId;
+    private String itemName;
+    private int quantity;
+    private double unitPrice;
+    private double totalPrice;
+    private Button btnRemove;
+}
