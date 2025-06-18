@@ -46,12 +46,11 @@ public class OrderModel {
     }
 
 
-    public String getNextOrderId() throws SQLException, ClassNotFoundException {
-        // Only get IDs that match the expected pattern
-        ResultSet resultSet = CrudUtil.execute("SELECT order_id FROM orders WHERE order_id REGEXP '^I[0-9]+$' ORDER BY order_id DESC LIMIT 1");
+    public String getNextOrderId() throws SQLException {
+        ResultSet resultSet = CrudUtil.execute("SELECT order_id FROM orders ORDER BY order_id DESC LIMIT 1");
         char tableCharacter = 'O';
 
-        if (resultSet.next()) {
+        while (resultSet.next()) {
             String lastId = resultSet.getString(1);
             String lastIdNumberString = lastId.substring(1);
             int lastIdNumber = Integer.parseInt(lastIdNumberString);

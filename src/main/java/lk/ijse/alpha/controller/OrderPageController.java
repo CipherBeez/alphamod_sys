@@ -31,7 +31,6 @@ public class OrderPageController implements Initializable {
     public Label lblItemQty;
     public Label lblItemPrice;
     public Label lblFinalTotalAmount;
-    public Label lblProfit;
     public Label lblTotalItemsSold;
 
     public TableView<CartTm> tblOrder;
