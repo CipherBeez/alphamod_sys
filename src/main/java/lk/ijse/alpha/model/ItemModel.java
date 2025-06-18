@@ -156,4 +156,18 @@ public class ItemModel {
                 return false;
             }
         }
+
+    public boolean decreaseItemQty(String itemId, int cartQty) {
+        try {
+            return CrudUtil.execute("UPDATE item SET quantity = quantity - ? WHERE item_name = ?",
+                    cartQty,
+                    itemId
+            );
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
 }

@@ -24,12 +24,11 @@ CREATE TABLE Orders (
 -- order_details Table
 CREATE TABLE order_details (
                                order_id VARCHAR(20),
-                               item_id VARCHAR(20),
+                               item_name VARCHAR(100),
                                qty INT NOT NULL,
-                               unit_price DECIMAL(10,2) NOT NULL,
-                               PRIMARY KEY (order_id, item_id),
-                               FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE CASCADE ON UPDATE CASCADE,
-                               FOREIGN KEY (item_id) REFERENCES Item(item_id) ON DELETE CASCADE ON UPDATE CASCADE
+                               total_price DECIMAL(10,2) NOT NULL,
+                               PRIMARY KEY (order_id),
+                               FOREIGN KEY (order_id) REFERENCES Orders(order_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 -- Supplier Table
