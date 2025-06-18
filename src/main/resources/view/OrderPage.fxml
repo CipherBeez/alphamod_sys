@@ -183,7 +183,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label prefHeight="58.0" prefWidth="229.0" text="0">
+                  <Label fx:id="lblFinalTotalAmount" prefHeight="58.0" prefWidth="229.0" text="0">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
@@ -200,7 +200,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label prefHeight="58.0" prefWidth="229.0" text="0">
+                  <Label fx:id="lblProfit" prefHeight="58.0" prefWidth="229.0" text="0">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>
@@ -217,7 +217,7 @@
                         <Insets left="10.0" />
                      </HBox.margin>
                   </Label>
-                  <Label prefHeight="58.0" prefWidth="229.0" text="0">
+                  <Label fx:id="lblTotalItemsSold" prefHeight="58.0" prefWidth="229.0" text="0">
                      <font>
                         <Font name="Arial Bold" size="19.0" />
                      </font>

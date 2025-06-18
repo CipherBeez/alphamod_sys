@@ -30,6 +30,9 @@ public class OrderPageController implements Initializable {
     public TextField txtAddToCartQty;
     public Label lblItemQty;
     public Label lblItemPrice;
+    public Label lblFinalTotalAmount;
+    public Label lblProfit;
+    public Label lblTotalItemsSold;
 
     public TableView<CartTm> tblOrder;
     public TableColumn<CartTm, String> colItemId;
@@ -111,6 +114,7 @@ public class OrderPageController implements Initializable {
                 cartTm.setTotal(newQty * unitPrice);
                 tblOrder.refresh();
                 txtAddToCartQty.clear();
+                updateFinalDetails();
                 return;
             }
         }
@@ -121,10 +125,25 @@ public class OrderPageController implements Initializable {
         btnRemove.setOnAction(e -> {
             cartData.remove(tm);
             tblOrder.refresh();
+            updateFinalDetails();
         });
 
         cartData.add(tm);
         txtAddToCartQty.clear();
+        updateFinalDetails();
+    }
+
+    private void updateFinalDetails() {
+        double totalAmount = 0.0;
+        int totalItems = 0;
+
+        for (CartTm tm : cartData) {
+            totalAmount += tm.getTotal();
+            totalItems += tm.getCartQty();
+        }
+
+        lblFinalTotalAmount.setText(String.format("%.2f", totalAmount));
+        lblTotalItemsSold.setText(String.valueOf(totalItems));
     }
 
     public void btnPlaceOrderOnAAction(ActionEvent event) {
