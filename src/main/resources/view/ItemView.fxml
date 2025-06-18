@@ -198,7 +198,7 @@
                                 </Label>
                             </center>
                         </BorderPane>
-                        <TableView fx:id="tblItem" onMouseClicked="#onClickTable" prefHeight="491.0" prefWidth="925.0" stylesheets="@tableView.css">
+                        <TableView fx:id="tblItem" onMouseClicked="#onClickTable" prefHeight="389.0" prefWidth="925.0" stylesheets="@tableView.css">
                             <columns>
                                 <TableColumn fx:id="colId" prefWidth="75.0" text="Item Id" />
                                 <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
@@ -214,6 +214,34 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                      </columnResizePolicy>
                         </TableView>
+                  <HBox prefHeight="38.0" prefWidth="925.0" style="-fx-background-radius: 20; -fx-border-color: #000; -fx-border-radius: 20;">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="142.0" text="Total">
+                           <HBox.margin>
+                              <Insets left="50.0" right="50.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Elephant" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="37.0" prefWidth="10.0" text=":">
+                           <font>
+                              <Font name="Elephant" size="27.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFinalTotal" prefHeight="37.0" prefWidth="670.0" text="100.00">
+                           <font>
+                              <Font name="Elephant" size="27.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
                     </children>
                 </VBox>
             </children>

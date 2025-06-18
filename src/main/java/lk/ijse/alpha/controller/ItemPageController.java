@@ -39,6 +39,7 @@ public class ItemPageController implements Initializable {
     private final ItemModel itemModel = new ItemModel();
 
     public TextField searchField;
+    public Label lblFinalTotal;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -74,6 +75,7 @@ public class ItemPageController implements Initializable {
         try {
             loadTableData();
             loadNextId();
+            updateFinalTotal();
 
             btnSave.setDisable(false);
             btnUpdate.setDisable(true);
@@ -223,5 +225,13 @@ public class ItemPageController implements Initializable {
             e.printStackTrace();
             new Alert(Alert.AlertType.ERROR, "Failed to search items").show();
         }
+    }
+    private void updateFinalTotal(){
+        double total = 0.0;
+
+        for (ItemTm itemTm : tblItem.getItems()) {
+            total += itemTm.getQtyTotal();
+        }
+        lblFinalTotal.setText(String.format("%.2f", total));
     }
 }

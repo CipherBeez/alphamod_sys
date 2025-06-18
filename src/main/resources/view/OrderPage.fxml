@@ -150,62 +150,70 @@
                 </TableView>
             </children>
         </VBox>
-        <HBox layoutX="20.0" layoutY="650.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="660.0">
-            <children>
-                <Button mnemonicParsing="false" onAction="#btnResetOnAction" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to right, #FF5F6D, #FFC371); -fx-background-radius: 20px;" text="Reset" HBox.hgrow="ALWAYS">
-                    <font>
-                        <Font name="Arial Bold" size="16.0" />
-                    </font>
-                    <HBox.margin>
-                        <Insets left="20.0" top="210.0" />
-                    </HBox.margin>
-                </Button>
-                <Button mnemonicParsing="false" onAction="#btnPlaceOrderOnAAction" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(to right, #00b09b, #96c93d); -fx-background-radius: 20px;" text="Place Order" HBox.hgrow="ALWAYS">
-                    <font>
-                        <Font name="Arial Bold" size="16.0" />
-                    </font>
-                    <HBox.margin>
-                        <Insets left="20.0" right="-70.0" top="210.0" />
-                    </HBox.margin>
-                </Button>
-            </children>
-        </HBox>
-      <VBox prefHeight="147.0" prefWidth="1340.0" style="-fx-border-color: #7209b7; -fx-border-width: 3px; -fx-border-radius: 10px;" AnchorPane.bottomAnchor="185.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
+      <VBox layoutX="14.0" layoutY="622.0" AnchorPane.bottomAnchor="148.39999999999998" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="622.0">
          <children>
-            <HBox prefHeight="58.0" prefWidth="1334.0">
-               <children>
-                  <Label prefHeight="58.0" prefWidth="229.0" text="Total Amount :">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Label>
-                  <Label fx:id="lblFinalTotalAmount" prefHeight="58.0" prefWidth="229.0" text="0">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox prefHeight="58.0" prefWidth="1334.0">
-               <children>
-                  <Label prefHeight="58.0" prefWidth="229.0" text="Total Items Sold :">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Label>
-                  <Label fx:id="lblTotalItemsSold" prefHeight="58.0" prefWidth="229.0" text="0">
-                     <font>
-                        <Font name="Arial Bold" size="19.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
+              <HBox prefHeight="230.0" prefWidth="1360.0">
+                  <children>
+                  <VBox prefHeight="230.0" prefWidth="206.0">
+                     <children>
+                            <Button mnemonicParsing="false" onAction="#btnPlaceOrderOnAAction" prefHeight="50.0" prefWidth="193.0" style="-fx-background-color: linear-gradient(to right, #00b09b, #96c93d); -fx-background-radius: 20px;" text="Place Order">
+                                <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                </font>
+                            </Button>
+                            <Button mnemonicParsing="false" onAction="#btnResetOnAction" prefHeight="50.0" prefWidth="197.0" style="-fx-background-color: linear-gradient(to right, #FF5F6D, #FFC371); -fx-background-radius: 20px;" text="Reset">
+                                <font>
+                                    <Font name="Arial Bold" size="16.0" />
+                                </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" top="17.0" />
+                           </VBox.margin>
+                            </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="230.0" prefWidth="1118.0" style="-fx-border-color: #7209b7; -fx-border-width: 3px; -fx-border-radius: 10px;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox prefHeight="58.0" prefWidth="1334.0">
+                           <children>
+                              <Label prefHeight="58.0" prefWidth="229.0" text="Total Amount :">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblFinalTotalAmount" prefHeight="58.0" prefWidth="229.0" text="0">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="58.0" prefWidth="1334.0">
+                           <children>
+                              <Label prefHeight="58.0" prefWidth="229.0" text="Total Items Sold :">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="lblTotalItemsSold" prefHeight="58.0" prefWidth="229.0" text="0">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  </children>
+               <VBox.margin>
+                  <Insets top="-6.0" />
+               </VBox.margin>
+              </HBox>
          </children>
       </VBox>
     </children>
