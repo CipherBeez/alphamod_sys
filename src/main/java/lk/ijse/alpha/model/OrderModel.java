@@ -1,5 +1,6 @@
 package lk.ijse.alpha.model;
 
+import lk.ijse.alpha.dto.CartDto;
 import lk.ijse.alpha.dto.OrderDto;
 import lk.ijse.alpha.util.CrudUtil;
 
@@ -52,4 +53,8 @@ public String getNextOrderId() throws SQLException, ClassNotFoundException {
     }
     return tableCharacter + "001";
 }
+
+    public boolean placeOrder(OrderDto orderDto, ArrayList<CartDto> cartList) {
+        return true;
+    }
 }

@@ -112,18 +112,18 @@ public class ItemModel {
                     cartDto.getItemId()
             );
         }*/
-        public ArrayList<String> getAllItemIds() throws SQLException {
-            ResultSet resultSet = CrudUtil.execute("SELECT item_id FROM item");
-            ArrayList<String> itemIds = new ArrayList<>();
+        public ArrayList<String> getItemNames() throws SQLException {
+            ResultSet resultSet = CrudUtil.execute("SELECT item_name FROM item");
+            ArrayList<String> itemNames = new ArrayList<>();
             while (resultSet.next()) {
-                String id = resultSet.getString(1);
-                itemIds.add(id);
+                String name = resultSet.getString(1);
+                itemNames.add(name);
             }
-            return itemIds;
+            return itemNames;
         }
-        public ItemDto findById(String selectedItemId) throws SQLException {
-            ResultSet resultSet = CrudUtil.execute("SELECT * FROM item WHERE item_id = ?",
-                    selectedItemId
+        public ItemDto findIdByName(String name) throws SQLException {
+            ResultSet resultSet = CrudUtil.execute("SELECT * FROM item WHERE item_name = ?",
+                    name
             );
             if (resultSet.next()) {
                 return new ItemDto(

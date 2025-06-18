@@ -1,7 +1,13 @@
 package lk.ijse.alpha.dto;
 
 import javafx.scene.control.Button;
+import lombok.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@ToString
 public class CartDto {
     private String orderId;
     private String itemId;
