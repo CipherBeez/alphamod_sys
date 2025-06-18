@@ -64,8 +64,7 @@ public class ItemPageController implements Initializable {
                         itemDto.getItemName(),
                         itemDto.getQuantity(),
                         itemDto.getBuyPrice(),
-                        itemDto.getSellPrice(),
-                        itemDto.getTotal()
+                        itemDto.getSellPrice()
                 )).toList()
         ));
     }
@@ -109,8 +108,7 @@ public class ItemPageController implements Initializable {
                 itemName,
                 quantity,
                 buyPrice,
-                sellPrice,
-                total
+                sellPrice
         );
         
         try {
@@ -140,8 +138,7 @@ public class ItemPageController implements Initializable {
                 itemName,
                 Integer.parseInt(quantity),
                 Double.parseDouble(buyingPrice),
-                Double.parseDouble(sellingPrice),
-                Double.parseDouble(total)
+                Double.parseDouble(sellingPrice)
         );
 
         try {
@@ -214,8 +211,7 @@ public class ItemPageController implements Initializable {
                                 itemDto.getItemName(),
                                 itemDto.getQuantity(),
                                 itemDto.getBuyPrice(),
-                                itemDto.getSellPrice(),
-                                itemDto.getTotal()
+                                itemDto.getSellPrice()
                         )).toList()
                 ));
             }
