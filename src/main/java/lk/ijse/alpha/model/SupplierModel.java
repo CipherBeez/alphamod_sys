@@ -1,7 +1,7 @@
-package lk.ijse.krishannew.model;
+package lk.ijse.alpha.model;
 
-import lk.ijse.krishannew.dto.SupplierDto;
-import lk.ijse.krishannew.util.CrudUtil;
+import lk.ijse.alpha.dto.SupplierDto;
+import lk.ijse.alpha.util.CrudUtil;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

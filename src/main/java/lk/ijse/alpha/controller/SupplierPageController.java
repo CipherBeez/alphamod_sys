@@ -1,17 +1,16 @@
-package lk.ijse.krishannew.controller;
+package lk.ijse.alpha.controller;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import lk.ijse.krishannew.dto.SupplierDto;
-import lk.ijse.krishannew.dto.Tm.SupplierTm;
-import lk.ijse.krishannew.model.SupplierModel;
+import lk.ijse.alpha.dto.SupplierDto;
+import lk.ijse.alpha.dto.Tm.SupplierTm;
+import lk.ijse.alpha.model.SupplierModel;
 
 import java.net.URL;
 import java.sql.SQLException;

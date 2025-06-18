@@ -1,4 +1,4 @@
-package lk.ijse.krishannew.db;
+package lk.ijse.alpha.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

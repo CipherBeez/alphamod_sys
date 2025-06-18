@@ -1,6 +1,6 @@
-package lk.ijse.krishannew.util;
+package lk.ijse.alpha.util;
 
-import lk.ijse.krishannew.db.DBConnection;
+import lk.ijse.alpha.db.DBConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

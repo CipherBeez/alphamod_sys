@@ -1,22 +1,18 @@
-package lk.ijse.krishannew.dto;
+package lk.ijse.alpha.dto.Tm;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 
-public class ItemDto {
+public class ItemTm {
     private String itemId;
     private String itemName;
     private int quantity;
     private double buyPrice;
     private double sellPrice;
     private double total;
-
 }
-

@@ -1,4 +1,4 @@
-package lk.ijse.krishannew.dto.Tm;
+package lk.ijse.alpha.dto.Tm;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

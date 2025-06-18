@@ -1,4 +1,4 @@
-package lk.ijse.krishannew.controller;
+package lk.ijse.alpha.controller;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -7,9 +7,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import lk.ijse.krishannew.dto.ItemDto;
-import lk.ijse.krishannew.dto.Tm.ItemTm;
-import lk.ijse.krishannew.model.ItemModel;
+import lk.ijse.alpha.dto.ItemDto;
+import lk.ijse.alpha.dto.Tm.ItemTm;
+import lk.ijse.alpha.model.ItemModel;
 
 import java.net.URL;
 import java.sql.SQLException;

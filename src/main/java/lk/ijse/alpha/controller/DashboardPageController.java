@@ -1,4 +1,4 @@
-package lk.ijse.krishannew.controller;
+package lk.ijse.alpha.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;

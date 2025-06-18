@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>lk.ijse</groupId>
-    <artifactId>krishanNew</artifactId>
+    <artifactId>alpha</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>krishanNew</name>
+    <name>alpha</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -76,7 +76,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>lk.ijse.krishannew/lk.ijse.krishannew.HelloApplication</mainClass>
+                            <mainClass>lk.ijse.alpha/lk.ijse.alpha.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>

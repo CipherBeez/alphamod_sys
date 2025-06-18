@@ -1,4 +1,4 @@
-package lk.ijse.krishannew.controller;
+package lk.ijse.alpha.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

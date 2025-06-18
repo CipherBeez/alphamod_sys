@@ -1,4 +1,4 @@
-package lk.ijse.krishannew.dto;
+package lk.ijse.alpha.dto;
 
 import javafx.scene.control.Button;
 
